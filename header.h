@@ -1,5 +1,5 @@
-#ifndef MINISHELL_H
-#define MINISHELL_H
+#ifndef HEADER_H
+#define HEADER_H
 
 #include <stdio.h>
 #include "mlx.h"

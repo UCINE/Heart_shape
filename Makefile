@@ -3,7 +3,7 @@ CFLAGS = -Wall -Wextra -Werror
 LIBS = -L/usr/X11/lib -lmlx -lXext -lX11
 INCLUDES = -I/usr/X11/include
 
-SRCS = main.c
+SRCS = heart_shape.c
 OBJS = $(SRCS:.c=.o)
 
 TARGET = heart
