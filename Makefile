@@ -1,7 +1,5 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-LIBS = -L/usr/X11/lib -lmlx -lXext -lX11
-INCLUDES = -I/usr/X11/include
 
 SRCS = heart_shape.c
 OBJS = $(SRCS:.c=.o)
@@ -11,10 +9,10 @@ TARGET = heart
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) $(LIBS) $(INCLUDES) -o $(TARGET)
+	$(CC) $(CFLAGS) $(OBJS) -lmlx -framework OpenGL -framework AppKit -o $(TARGET)
 
 %.o: %.c
-	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)

@@ -12,7 +12,8 @@ void draw_heart(t_point center, int size)
   int i;
   int n = 500;
   float x, y;
-  for (i = 0; i < n; i++) {
+  for (i = 0; i < n; i++) 
+  {
     x = (float)(2 * i - n) / (float)n * size;
     y = (sqrt(cos(x)) * cos(200 * x) + sin(fabs(x)) - 0.7) * (4 - x*x) / sqrt(fabs(9 - x*x)) * size;
     mlx_pixel_put(mlx, win, center.x + x, center.y + y, 0xFFFFFF);
