@@ -18,7 +18,7 @@ void draw_heart(t_point center, int size)
     y = (sqrt(cos(x)) * cos(200 * x) + sin(fabs(x)) - 0.7) * (4 - x*x) / sqrt(fabs(9 - x*x)) * size;
     mlx_pixel_put(mlx, win, center.x + x, center.y + y, 0xFFFFFF);
   }
-//the equation here is correct but you still need to use some colors for clear shape 
+   //the equation here is correct but you still need to use some colors for clear shape
   mlx_loop(mlx);
 }
 
